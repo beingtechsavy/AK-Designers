@@ -26,23 +26,23 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30" data-testid="section-services">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/40" data-testid="section-services">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-heading font-light text-center mb-16" data-testid="text-services-title">
+        <h2 className="text-4xl md:text-5xl font-heading font-light text-center mb-20" data-testid="text-services-title">
           Our Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {services.map((service, index) => (
             <Card
               key={service.title}
-              className="p-8 hover-elevate active-elevate-2 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="p-10 hover-elevate active-elevate-2 transition-all duration-500 hover:-translate-y-2 cursor-pointer border-0 shadow-sm"
               data-testid={`card-service-${index}`}
             >
-              <service.icon className="h-12 w-12 text-primary mb-6" />
-              <h3 className="text-xl font-heading font-medium mb-3" data-testid={`text-service-title-${index}`}>
+              <service.icon className="h-14 w-14 text-primary mb-7" />
+              <h3 className="text-xl font-heading font-medium mb-4" data-testid={`text-service-title-${index}`}>
                 {service.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-service-description-${index}`}>
+              <p className="text-base text-muted-foreground leading-relaxed" data-testid={`text-service-description-${index}`}>
                 {service.description}
               </p>
             </Card>

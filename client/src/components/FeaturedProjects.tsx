@@ -1,55 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import resortImage from "@assets/generated_images/Resort_architecture_project_91c2f265.png";
-import residentialImage from "@assets/generated_images/Residential_landscape_project_5ba675b9.png";
-import commercialImage from "@assets/generated_images/Commercial_landscape_project_ae673c28.png";
-import hospitalityImage from "@assets/generated_images/Hospitality_landscape_4237f49e.png";
-import zooImage from "@assets/generated_images/Zoological_park_habitat_fcbe9b6a.png";
-import monumentImage from "@assets/generated_images/Monument_landscape_cdfbbf9f.png";
-
-const featuredProjects = [
-  {
-    id: "1",
-    title: "Coastal Resort Paradise",
-    location: "Goa, India",
-    category: "Hospitality",
-    image: resortImage,
-  },
-  {
-    id: "2",
-    title: "Urban Zen Garden",
-    location: "Mumbai, India",
-    category: "Residential",
-    image: residentialImage,
-  },
-  {
-    id: "3",
-    title: "Corporate Campus Landscape",
-    location: "Pune, India",
-    category: "Commercial",
-    image: commercialImage,
-  },
-  {
-    id: "4",
-    title: "Luxury Resort & Spa",
-    location: "Kerala, India",
-    category: "Hospitality",
-    image: hospitalityImage,
-  },
-  {
-    id: "5",
-    title: "Wildlife Conservation Park",
-    location: "Bangalore, India",
-    category: "Zoological",
-    image: zooImage,
-  },
-  {
-    id: "6",
-    title: "Heritage Monument Gardens",
-    location: "Rajasthan, India",
-    category: "Monument",
-    image: monumentImage,
-  },
-];
+import { featuredProjects } from "@/data/projects";
 
 export default function FeaturedProjects() {
   return (
@@ -63,7 +13,14 @@ export default function FeaturedProjects() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard 
+              key={project.id} 
+              id={project.id}
+              title={project.title}
+              location={project.location}
+              category={project.category}
+              image={project.heroImage}
+            />
           ))}
         </div>
       </div>

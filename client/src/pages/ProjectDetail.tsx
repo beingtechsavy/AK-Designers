@@ -1,27 +1,26 @@
-import { useRoute } from "wouter";
+import { useRoute, Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import resortImage from "@assets/generated_images/Resort_architecture_project_91c2f265.png";
-import residentialImage from "@assets/generated_images/Residential_landscape_project_5ba675b9.png";
-import commercialImage from "@assets/generated_images/Commercial_landscape_project_ae673c28.png";
-import hospitalityImage from "@assets/generated_images/Hospitality_landscape_4237f49e.png";
-
-const projectData: Record<string, any> = {
-  "1": {
-    title: "Coastal Resort Paradise",
-    location: "Goa, India",
-    category: "Hospitality",
-    year: "2023",
-    client: "Paradise Hotels Group",
-    heroImage: resortImage,
-    description: "A luxurious coastal resort featuring naturalistic landscape design that seamlessly integrates with the tropical environment. The project encompasses infinity pools, tropical gardens, and outdoor living spaces that create an immersive guest experience.",
-    images: [resortImage, hospitalityImage, residentialImage, commercialImage],
-  },
-};
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { getProjectById } from "@/data/projects";
 
 export default function ProjectDetail() {
   const [, params] = useRoute("/project/:id");
-  const project = projectData[params?.id || "1"] || projectData["1"];
+  const project = getProjectById(params?.id || "");
+
+  if (!project) {
+    return (
+      <div className="pt-24 pb-20 px-4 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-3xl font-heading mb-4">Project Not Found</h1>
+          <Link href="/portfolio">
+            <Button>Back to Portfolio</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-20 min-h-screen">
@@ -31,6 +30,14 @@ export default function ProjectDetail() {
         data-testid="hero-project-detail"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
+        <div className="absolute top-8 left-4 sm:left-8 z-10">
+          <Link href="/portfolio">
+            <Button variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20" data-testid="button-back">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Portfolio
+            </Button>
+          </Link>
+        </div>
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
             <Badge className="mb-4" data-testid="badge-project-category">{project.category}</Badge>

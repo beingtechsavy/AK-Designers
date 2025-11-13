@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import logoImage from "@assets/image_1763060581161.png";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -33,15 +34,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" data-testid="link-home">
-            <a className="flex items-center gap-3 hover-elevate rounded-md px-2 py-1 -ml-2">
-              <div className="flex flex-col">
-                <span className="text-lg font-heading font-semibold tracking-tight text-foreground">
-                  Arun Kumar Landscapes
-                </span>
-                <span className="text-xs text-muted-foreground font-light">
-                  Since 1985
-                </span>
-              </div>
+            <a className="flex items-center gap-3 hover-elevate rounded-md px-3 py-2 -ml-3">
+              <img src={logoImage} alt="Arun Kumar Designers" className="h-12" />
             </a>
           </Link>
 

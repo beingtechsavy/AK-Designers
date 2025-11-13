@@ -1,45 +1,22 @@
 import { useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
-import resortImage from "@assets/generated_images/Resort_architecture_project_91c2f265.png";
-import residentialImage from "@assets/generated_images/Residential_landscape_project_5ba675b9.png";
-import commercialImage from "@assets/generated_images/Commercial_landscape_project_ae673c28.png";
-import hospitalityImage from "@assets/generated_images/Hospitality_landscape_4237f49e.png";
-import zooImage from "@assets/generated_images/Zoological_park_habitat_fcbe9b6a.png";
-import monumentImage from "@assets/generated_images/Monument_landscape_cdfbbf9f.png";
-import publicImage from "@assets/generated_images/Public_space_landscape_a7ee614e.png";
+import { allProjects, getProjectsByCategory } from "@/data/projects";
 
 const categories = [
   "All",
-  "Landscape",
-  "Architecture",
   "Hospitality",
   "Residential",
+  "Private Residential",
   "Commercial",
-  "Monument",
-  "Public Spaces",
-  "Zoological",
-];
-
-const allProjects = [
-  { id: "1", title: "Coastal Resort Paradise", location: "Goa, India", category: "Hospitality", image: resortImage },
-  { id: "2", title: "Urban Zen Garden", location: "Mumbai, India", category: "Residential", image: residentialImage },
-  { id: "3", title: "Corporate Campus Landscape", location: "Pune, India", category: "Commercial", image: commercialImage },
-  { id: "4", title: "Luxury Resort & Spa", location: "Kerala, India", category: "Hospitality", image: hospitalityImage },
-  { id: "5", title: "Wildlife Conservation Park", location: "Bangalore, India", category: "Zoological", image: zooImage },
-  { id: "6", title: "Heritage Monument Gardens", location: "Rajasthan, India", category: "Monument", image: monumentImage },
-  { id: "7", title: "Urban Public Park", location: "Delhi, India", category: "Public Spaces", image: publicImage },
-  { id: "8", title: "Modern Architecture Studio", location: "Hyderabad, India", category: "Architecture", image: commercialImage },
-  { id: "9", title: "Tropical Landscape Design", location: "Chennai, India", category: "Landscape", image: hospitalityImage },
+  "Monuments",
+  "Public Places",
 ];
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? allProjects
-      : allProjects.filter((project) => project.category === selectedCategory);
+  const filteredProjects = getProjectsByCategory(selectedCategory);
 
   return (
     <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen">
@@ -69,7 +46,14 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-testid="projects-grid">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard 
+              key={project.id} 
+              id={project.id}
+              title={project.title}
+              location={project.location}
+              category={project.category}
+              image={project.heroImage}
+            />
           ))}
         </div>
 

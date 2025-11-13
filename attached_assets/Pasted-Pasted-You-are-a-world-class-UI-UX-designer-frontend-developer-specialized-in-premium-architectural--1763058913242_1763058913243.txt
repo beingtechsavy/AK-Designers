@@ -1,0 +1,211 @@
+Pasted-You-are-a-world-class-UI-UX-designer-frontend-developer-specialized-in-premium-architectural-websi-1763058435227_1763058435232.txt
+You are a world-class UI/UX designer + frontend developer specialized in premium architectural websites.
+Create a fully responsive, modern, minimal, luxurious website (HTML + CSS + JS) for an architecture and landscape design studio called “Arun Kumar Landscapes.”
+
+🎨 Design Philosophy
+
+Think like Apple + Aesop + Architectural Digest.
+
+Clean whitespace, elegant spacing, smooth transitions.
+
+Light theme with soft greys (#F7F7F7), white (#FFFFFF), charcoal (#222), and muted sage green accents (#9BAEA5).
+
+Use Montserrat or Poppins for headings, Inter or Lora for body text.
+
+Subtle fade-in animations, no heavy or distracting effects.
+
+All images should use placeholder URLs or unsplash links I can replace later.
+
+📌 Build the following pages/sections:
+1️⃣ Homepage
+Hero Section
+
+Full-width background image with a dark 20% overlay.
+
+Large elegant text:
+
+“Designing Nature. Crafting Experiences.”
+
+Subtitle: “Landscape & Architectural Design Studio”
+
+Two buttons:
+
+View Portfolio
+
+Contact Studio
+
+Smooth fade/slide animations.
+
+Intro Section
+
+Short 2–3 liner about the firm:
+
+“We create nature-inspired landscapes, immersive architecture, and timeless spatial experiences. Over 40 years of expertise across hospitality, commercial, residential, and public spaces.”
+
+Services Snapshot (4 cards)
+
+Landscape Design
+
+Architecture
+
+Resorts & Hospitality
+
+Zoological Parks & Aquariums
+
+Modern card layout, hover lift, subtle shadow.
+
+Featured Projects (Grid)
+
+3–6 project thumbnails with:
+
+Image
+
+Title
+
+Location
+
+Category tag
+
+Click → Opens dedicated project page.
+
+Clients / Logos Strip
+
+Minimal, greyscale logos in a horizontal slider.
+
+Newsletter Block
+
+Clean email box:
+
+“Stay updated with our architectural journeys.”
+
+2️⃣ Portfolio Page
+
+Category filters:
+
+Landscape
+
+Architecture
+
+Hospitality
+
+Residential
+
+Commercial
+
+Monuments
+
+Public Spaces
+
+Responsive masonry grid
+Cards should include:
+
+Image placeholder
+
+Project Name
+
+Location
+
+Category
+
+Smooth hover zoom effect.
+
+3️⃣ Individual Project Page Template
+
+For each project create a template with:
+
+Hero
+
+Full-width hero image + title overlay.
+
+Quick Info Row
+
+Client
+
+Location
+
+Category
+
+Year
+
+Case Description
+
+Short storytelling paragraph.
+
+Image Gallery
+
+Clean 3-column responsive grid.
+Add lightbox modal on click.
+
+Related Projects Slider
+4️⃣ About Us
+
+Founder photo placeholder
+
+Studio philosophy statement
+
+Small timeline of achievements
+
+Studio team photo grid
+
+5️⃣ Contact Page
+
+Clean contact form (Name, Email, Phone, Message)
+
+Google Map embed placeholder
+
+Contact details:
+
+A1/102, Raunak Park, Kokani Pada, Pokhran Road no. 2, Thane (W) 400610
+
+studio@arunkumarlandscapes.com
+
++91 22 2173 2039
+
++91 85910 73332
+
+Also add a floating WhatsApp chat button.
+
+🧩 GLOBAL REQUIREMENTS
+✔ Fully responsive (mobile-first)
+✔ Smooth scroll animations (AOS or custom fade)
+✔ Sticky navbar
+✔ Elegant footer with 4 columns
+✔ Clean, maintainable code (no tailwind unless asked)
+✔ Use CSS variables for theme colors
+✔ Keep JavaScript minimal and modular
+✔ Uses HTML semantic tags (section, article, header, nav)
+✔ Include placeholders for all images
+🏁 OUTPUT FORMAT
+
+Provide the solution as:
+
+1. Final full-code (HTML + CSS + JS in one file)
+
+OR
+
+2. Separate files
+
+index.html
+
+portfolio.html
+
+project.html
+
+about.html
+
+contact.html
+
+styles.css
+
+script.js
+
+(Choose whichever gives a cleaner structure.)
+
+⭐ VERY IMPORTANT
+
+Make the design feel premium, clean, architectural, calming, luxurious, professional, and client-ready.
+Spacing, typography, rhythm, and visual balance are the top priorities.
+
+END OF PROMPT
+
+Generate the complete website now.
